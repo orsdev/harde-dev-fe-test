@@ -1,0 +1,15 @@
+.alert {
+  @extend %font-20;
+  margin-top: 40px;
+
+  &__danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 20px;
+
+    h3 {
+      text-transform: capitalize;
+    }
+  }
+}
