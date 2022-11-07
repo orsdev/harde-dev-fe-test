@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+$zIndexes: (
+  'hide': -1,
+  'base': 10,
+  'nav': 20,
+  'sidebar': 30,
+  'modal': 40,
+  'overlay': 50
+);
+
+@function zIndex($name) {
+  $value: map.get($zIndexes, $name);
+  @if $value {
+    @return $value;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; Choose one of: #{$zIndexes}';
+    @return 0;
+  }
+}
