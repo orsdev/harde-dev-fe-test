@@ -1,0 +1,20 @@
+.ballot {
+  &__header {
+    text-align: left;
+
+    h3 {
+      @extend %font-20;
+      background-color: $color-gray;
+      color: $color-primary;
+      padding: 10px 8px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
