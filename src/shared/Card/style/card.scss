@@ -5,9 +5,15 @@
   padding: 15px 10px;
   padding-bottom: 3px;
 
+  &:hover {
+    background-color: $color-accent;
+    transition: background-color 0.3s;
+  }
+
   &__title {
     @extend %font-16;
     font-weight: 500;
+    line-height: 20px;
     margin-bottom: 15px;
     text-transform: capitalize;
   }
@@ -17,6 +23,7 @@
     height: 60px;
     margin: auto;
     margin-bottom: 10px;
+    overflow: hidden;
     width: 60px;
 
     img {
@@ -40,7 +47,7 @@
     }
 
     &:hover {
-      background-color: darken($color-accent, 2px);
+      background-color: darken($color-accent, 4px);
       color: $color-highlight;
       transition: color 0.3s;
     }

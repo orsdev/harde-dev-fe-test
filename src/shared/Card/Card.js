@@ -1,9 +1,9 @@
-const Card = ({ user }) => {
+const Card = ({ ballot }) => {
   return (
     <div className="card">
-      <h4 className="card__title">{user?.title}</h4>
+      <h4 className="card__title">{ballot?.title}</h4>
       <div className="card__avatar">
-        <img src={user?.avatar} alt={user?.title} />
+        <img src={ballot?.photoUrL} alt={ballot?.title} />
       </div>
 
       <button className="card__button">Select Button</button>
