@@ -1,10 +1,11 @@
 import Ballot from "./components/ballot/Ballot";
+import Container from "./components/container/Container";
 
 function App() {
   return (
-    <main>
+    <Container>
       <Ballot />
-    </main>
+    </Container>
   );
 }
 
