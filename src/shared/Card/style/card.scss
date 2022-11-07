@@ -1,12 +1,11 @@
 .card {
-  background-color: $color-secondary;
   border: 2px solid $color-dark;
   cursor: pointer;
   padding: 15px 10px;
   padding-bottom: 3px;
 
   &:hover {
-    background-color: $color-accent;
+    background-color: $color-accent !important;
     transition: background-color 0.3s;
   }
 
