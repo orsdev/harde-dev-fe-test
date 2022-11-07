@@ -1,0 +1,48 @@
+.card {
+  background-color: $color-secondary;
+  border: 2px solid $color-dark;
+  cursor: pointer;
+  padding: 15px 10px;
+  padding-bottom: 3px;
+
+  &__title {
+    @extend %font-16;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 60px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    background-color: $color-accent;
+    border: 2px solid darken($color-accent, 5px);
+    color: $color-primary;
+    cursor: pointer;
+    padding: 5px 6px;
+    outline: none;
+
+    &:active {
+      transition: transform 0.3s;
+      transform: scale(0.97);
+    }
+
+    &:hover {
+      background-color: darken($color-accent, 2px);
+      color: $color-highlight;
+      transition: color 0.3s;
+    }
+  }
+}
