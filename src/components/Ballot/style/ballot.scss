@@ -7,6 +7,11 @@
       background-color: $color-gray;
       color: $color-primary;
       padding: 10px 8px;
+
+      /* Change the font size to 16px when the screen size is less than 500px. */
+      @include media("xs", "<") {
+        font-size: 16px;
+      }
     }
   }
 
