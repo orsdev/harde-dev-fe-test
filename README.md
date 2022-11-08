@@ -36,8 +36,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - [Create React App](https://github.com/facebook/create-react-app).
 - [SCSS](https://www.typescriptlang.org/)
-- [Vercel](https://vercel.com/)
-
-## Production Link
-
-[Movie-App](https://ogundare-samuel-lendsqr-fe-test.vercel.app/)
