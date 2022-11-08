@@ -22,4 +22,26 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  &__submit__button {
+    align-self: end;
+    background-color: $color-accent;
+    border: 2px solid darken($color-accent, 5px);
+    color: $color-primary;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: none;
+    text-transform: uppercase;
+
+    &:active {
+      transition: transform 0.3s;
+      transform: scale(0.97);
+    }
+
+    &:hover {
+      background-color: darken($color-accent, 4px);
+      color: $color-highlight;
+      transition: color 0.3s;
+    }
+  }
 }

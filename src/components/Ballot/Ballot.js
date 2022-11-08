@@ -28,7 +28,7 @@ const Ballot = () => {
 
       <div className="ballot">
         {ballots &&
-          ballots.map(({ id, title, items }) => (
+          ballots.map(({ id, title, items }, index) => (
             <div key={id}>
               <header className="ballot__header">
                 <h3>{title}</h3>
@@ -45,6 +45,12 @@ const Ballot = () => {
                       onSelected={() => onSelectNominee(item, id)}
                     />
                   ))}
+                {/* Show submit button on last card row */}
+                {index === ballots.length - 1 && (
+                  <button type="button" className="ballot__submit__button">
+                    Submit Ballot
+                  </button>
+                )}
               </div>
             </div>
           ))}
