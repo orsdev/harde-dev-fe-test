@@ -19,11 +19,11 @@
 
   &__avatar {
     border-radius: 50%;
-    height: 60px;
+    height: 65px;
     margin: auto;
     margin-bottom: 10px;
     overflow: hidden;
-    width: 60px;
+    width: 65px;
 
     img {
       height: 100%;
@@ -37,7 +37,7 @@
     border: 2px solid darken($color-accent, 5px);
     color: $color-primary;
     cursor: pointer;
-    padding: 5px 6px;
+    padding: 5px 15px;
     outline: none;
 
     &:active {

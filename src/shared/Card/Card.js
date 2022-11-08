@@ -15,7 +15,7 @@ const Card = ({ ballot, selected, id, onSelected }) => {
       </div>
 
       <button className="card__button" onClick={onSelected}>
-        Select Button
+        Select
       </button>
     </div>
   );
