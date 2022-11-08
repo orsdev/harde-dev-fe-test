@@ -1,2 +1,2 @@
-export const replaceHyphenWithSpaces = (colorName) =>
-  colorName.replace(/[-]/g, " ");
+export const replaceHyphenWithSpaces = (value) =>
+  value.replace(/[-]/g, " ");
