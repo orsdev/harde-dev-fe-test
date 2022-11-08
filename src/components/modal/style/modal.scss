@@ -1,0 +1,102 @@
+.modal {
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &:not(.show) {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &.fade {
+    transition: opacity 0.4s linear;
+  }
+
+  &.fade:not(.show) {
+    opacity: 0;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  &__dialog {
+    background-color: $color-primary;
+    max-width: 800px;
+    margin: 1.75rem auto;
+    padding: 10px;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    z-index: 6;
+
+    /* apply style when the screen size is less than 768px. */
+    @include media("sm", "<") {
+      width: 95%;
+    }
+  }
+
+  &__header {
+    text-align: right;
+    width: 100%;
+  }
+
+  &__button__close {
+    @extend %font-20;
+
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__content {
+    color: $color-dark;
+    margin-top: 30px;
+  }
+
+  &__group {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    list-style: none;
+    margin: 0;
+    text-align: left;
+  }
+
+  &__group__list {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__group__list__title {
+    @extend %font-20;
+    background-color: $color-gray;
+    color: $color-primary;
+    margin-bottom: 20px;
+    padding: 10px 8px;
+    text-transform: capitalize;
+
+    /* Change the font size to 16px when the screen size is less than 500px. */
+    @include media("xs", "<") {
+      font-size: 16px;
+    }
+  }
+}
