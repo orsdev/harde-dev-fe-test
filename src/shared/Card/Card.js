@@ -1,4 +1,10 @@
-const Card = ({ ballot, selected, id, onSelected }) => {
+const Card = ({
+  ballot,
+  selected,
+  id,
+  onSelected,
+  showSelectButton = true,
+}) => {
   return (
     <div
       className="card"
@@ -13,10 +19,11 @@ const Card = ({ ballot, selected, id, onSelected }) => {
       <div className="card__avatar">
         <img src={ballot?.photoUrL} alt={ballot?.title} />
       </div>
-
-      <button type="button" className="card__button" onClick={onSelected}>
-        Select
-      </button>
+      {showSelectButton && (
+        <button type="button" className="card__button" onClick={onSelected}>
+          Select
+        </button>
+      )}
     </div>
   );
 };
