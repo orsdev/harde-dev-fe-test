@@ -14,7 +14,7 @@ const Card = ({ ballot, selected, id, onSelected }) => {
         <img src={ballot?.photoUrL} alt={ballot?.title} />
       </div>
 
-      <button className="card__button" onClick={onSelected}>
+      <button type="button" className="card__button" onClick={onSelected}>
         Select
       </button>
     </div>
